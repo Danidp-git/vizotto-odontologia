@@ -8,11 +8,11 @@ Projeto de desenvolvimento **front-end** criado para transformar uma referência
 
 ### Desktop
 
-<img src="./screenshots/desktop.png" alt="Preview do projeto em desktop" width="100%">
+![Preview do projeto em desktop](./screenshots/desktop.png)
 
 ### Mobile
 
-<img src="./screenshots/mobile.png" alt="Preview do projeto em celular" width="390">
+![Preview do projeto em celular](./screenshots/mobile.png)
 
 ## 🚀 Tecnologias
 

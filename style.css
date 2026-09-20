@@ -4477,3 +4477,27 @@ html{scroll-behavior:smooth;}
     padding-right:3rem !important;
   }
 }
+
+
+/* Final portfolio palette: soft pink */
+:root {
+  --background: #fff7fa;
+  --foreground: #4a303b;
+  --card: #ffffff;
+  --card-foreground: #4a303b;
+  --popover: #ffffff;
+  --popover-foreground: #4a303b;
+  --primary: #d47b9a;
+  --primary-foreground: #ffffff;
+  --secondary: #fde8f0;
+  --secondary-foreground: #8f4967;
+  --muted: #fceff4;
+  --muted-foreground: #795b67;
+  --accent: #e6a1b9;
+  --accent-foreground: #4a303b;
+  --border: #f0ccd9;
+  --input: #f0ccd9;
+  --ring: #d47b9a;
+  --surface-glass: rgb(255 255 255 / 78%);
+  --shadow-button: 0 10px 28px -14px rgb(190 87 125 / 42%);
+}
