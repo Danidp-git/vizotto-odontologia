@@ -1,3 +1,6 @@
+
+
+/* Custom responsive and FAQ styles */
 /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
@@ -4385,5 +4388,92 @@
 
   20%, 50% {
     opacity: 0;
+  }
+}
+
+
+
+/* FAQ: garante uma seta visível em TODAS as perguntas */
+#duvidas button[data-radix-collection-item]{
+  position:relative;
+  min-height:56px;
+  padding-right:3.25rem !important;
+  touch-action:manipulation;
+}
+#duvidas button[data-radix-collection-item] > svg{
+  display:none !important;
+}
+#duvidas button[data-radix-collection-item]::after{
+  content:"";
+  position:absolute;
+  right:1rem;
+  top:50%;
+  width:.55rem;
+  height:.55rem;
+  border-right:2px solid currentColor;
+  border-bottom:2px solid currentColor;
+  transform:translateY(-65%) rotate(45deg);
+  transition:transform .2s ease;
+  opacity:.7;
+}
+#duvidas button[data-radix-collection-item][aria-expanded="true"]::after{
+  transform:translateY(-30%) rotate(225deg);
+  opacity:1;
+}
+#duvidas [role="region"]{
+  max-height:0;
+  transition:max-height .25s ease, opacity .2s ease;
+  opacity:0;
+}
+#duvidas [role="region"]:not([hidden]){
+  max-height:500px;
+  opacity:1;
+}
+
+/* Melhor experiência em telas pequenas */
+html{scroll-behavior:smooth;}
+@media (max-width: 767px){
+  body{overflow-x:hidden;}
+  section{scroll-margin-top:80px;}
+  #duvidas{
+    padding-left:1rem !important;
+    padding-right:1rem !important;
+    gap:1.5rem !important;
+  }
+  #duvidas h2{
+    max-width:none !important;
+    font-size:1.75rem !important;
+  }
+  #duvidas > div:last-child{
+    width:100%;
+  }
+  #duvidas > div:last-child > div{
+    padding-left:1rem !important;
+    padding-right:1rem !important;
+  }
+  #duvidas button[data-radix-collection-item]{
+    font-size:.95rem !important;
+    line-height:1.35 !important;
+    text-align:left !important;
+  }
+  a,button{ -webkit-tap-highlight-color:transparent; }
+  .overflow-x-auto{
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .overflow-x-auto::-webkit-scrollbar{display:none;}
+  iframe{
+    max-width:100%;
+  }
+  img,svg{
+    max-width:100%;
+  }
+}
+@media (max-width: 480px){
+  #duvidas button[data-radix-collection-item]{
+    min-height:62px;
+    padding-top:.9rem !important;
+    padding-bottom:.9rem !important;
+    padding-right:3rem !important;
   }
 }
